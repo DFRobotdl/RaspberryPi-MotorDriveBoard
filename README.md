@@ -13,7 +13,7 @@ DF推出全新的Raspberry Pi多功能电机驱动扩展板是一款全功能的
 ## 原理图
 
 #### 由于我们驱动板是使用I2C控制PCA9685芯片输出16路PWM，所有驱动直流电机或者舵机，不存在所谓的树莓派IO口和控制电机对应关系。
-详情可以看 [树莓派驱动板电路原理图](https://github.com/emakefun/RaspberryPi-MotorDriveBoard/blob/master/schematic/RaspBerryDriverBoard.pdf)
+详情可以看 [树莓派驱动板电路原理图](https://github.com/DFRobotdl/RaspberryPi-MotorDriveBoard/blob/master/schematic/RaspBerryDriverBoard.pdf)
 还可以查看驱动板正反面的丝印标注。
 
 ## 特点
