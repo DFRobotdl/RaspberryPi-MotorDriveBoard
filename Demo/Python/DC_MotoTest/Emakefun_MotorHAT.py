@@ -167,17 +167,17 @@ class Emakefun_DCMotor:
 		in1 = in2 = 0
 		self._speed = 0
 		if num == 0:
-			in1 = 0
-			in2 = 1
+			in1 = 13
+			in2 = 11
 		elif num == 1:
-			in1 = 3
-			in2 = 2
+			in1 = 10
+			in2 = 8
 		elif num == 2:
-			in1 = 4
-			in2 = 5
+			in1 = 2
+			in2 = 4
 		elif num == 3:
 			in1 = 7
-			in2 = 6
+			in2 = 5
 		else:
 			raise NameError('MotorHAT Motor must be between 1 and 4 inclusive')
 		#self.PWMpin = pwm
@@ -196,6 +196,9 @@ class Emakefun_DCMotor:
 		if (command == Emakefun_MotorHAT.RELEASE):
 			self.MC.setPin(self.IN1pin, 0)
 			self.MC.setPin(self.IN2pin, 0)
+		if (command == Emakefun_MotorHAT.BRAKE):
+			self.MC.setPWM(self.IN1pin, self._speed*16)
+			self.MC.setPWM(self.IN2pin, self._speed*16)
 
 	def setSpeed(self, speed):
 		if (speed < 0):
